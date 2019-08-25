@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "dec544c3-e828-4201-be4b-9d83ded601b6",
+		"name": "Sample API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get the list of user by Page Number ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "acae8827-2e37-4365-bee2-6554341c94ed",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Michael\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page={{PageNo}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{PageNo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

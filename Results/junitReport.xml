@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Sample API Test" tests="1" time="0.702">
+  <testsuite name="Get the list of user by Page Number " id="61f56a11-aa5e-4f39-b4d6-324fcf7b4288" tests="2" failures="0" errors="0" time="0.702">
+    <testcase name="Status code is 200" time="0.702"/>
+    <testcase name="Body matches string" time="0.702"/>
+  </testsuite>
+</testsuites>
